@@ -10,8 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScans({
         @MapperScan("com.example.springmybatisscanning.items"),
         @MapperScan("com.example.springmybatisscanning.samples")
-}
-)
+})
 public class SpringMybatisScanningApplication implements CommandLineRunner {
 
     private final ItemService itemService;
@@ -29,6 +28,7 @@ public class SpringMybatisScanningApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         itemService.displayItems();
+        itemService.displayCheapItems();
         sampleService.displaySamples();
     }
 }
