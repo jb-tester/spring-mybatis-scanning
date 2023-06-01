@@ -21,4 +21,11 @@ public class SampleService {
         }
         System.out.println("========================================================");
     }
+    public void displayRedSamples(){
+        System.out.println("======================= samples by color: ====================");
+        for (Sample sample : sampleMapper.findByColor("red")) {
+            System.out.println(sample);
+        }
+        System.out.println("========================================================");
+    }
 }

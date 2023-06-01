@@ -30,5 +30,6 @@ public class SpringMybatisScanningApplication implements CommandLineRunner {
         itemService.displayItems();
         itemService.displayCheapItems();
         sampleService.displaySamples();
+        sampleService.displayRedSamples();
     }
 }
