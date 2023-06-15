@@ -15,10 +15,12 @@ public class SpringMybatisScanningApplication implements CommandLineRunner {
 
     private final ItemService itemService;
     private final SampleService sampleService;
+    private final BarService barService;
 
-    public SpringMybatisScanningApplication(ItemService itemService, SampleService sampleService) {
+    public SpringMybatisScanningApplication(ItemService itemService, SampleService sampleService, BarService barService) {
         this.itemService = itemService;
         this.sampleService = sampleService;
+        this.barService = barService;
     }
 
     public static void main(String[] args) {
@@ -31,5 +33,6 @@ public class SpringMybatisScanningApplication implements CommandLineRunner {
         itemService.displayCheapItems();
         sampleService.displaySamples();
         sampleService.displayRedSamples();
+        barService.displayBars();
     }
 }
