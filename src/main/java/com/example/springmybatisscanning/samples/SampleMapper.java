@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
-
+// Navigate To Spring Bean Declaration doesn't work
 @Mapper
 public interface SampleMapper {
 
