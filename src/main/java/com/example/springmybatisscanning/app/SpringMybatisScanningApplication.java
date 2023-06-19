@@ -31,6 +31,8 @@ public class SpringMybatisScanningApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         itemService.displayItems();
         itemService.displayCheapItems();
+        sampleService.insertSample();
+        sampleService.updateSamples();
         sampleService.displaySamples();
         sampleService.displayRedSamples();
         barService.displayBars();

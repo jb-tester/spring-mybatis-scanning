@@ -2,6 +2,7 @@ package com.example.springmybatisscanning.app;
 
 import com.example.springmybatisscanning.samples.Sample;
 import com.example.springmybatisscanning.samples.SampleMapper;
+import com.example.springmybatisscanning.samples.Util;
 import org.springframework.stereotype.Service;
 
 
@@ -14,6 +15,14 @@ public class SampleService {
         this.sampleMapper = sampleMapper;
     }
 
+    public void insertSample(){
+        sampleMapper.insertSample(new Sample(1,"mybatis sample", "green"));
+    }
+
+    public void updateSamples(){
+        System.out.println("====================== samples update ===================");
+        System.out.println(sampleMapper.updateQuery(new Util()));
+    }
     public void displaySamples(){
         System.out.println("======================= all samples: ====================");
         for (Sample sample : sampleMapper.findAll()) {

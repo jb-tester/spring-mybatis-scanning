@@ -48,4 +48,10 @@ public class Sample {
                 ", color='" + color + '\'' +
                 '}';
     }
+
+    public Sample(int version, String sample, String color) {
+        this.version = version;
+        this.sample = sample;
+        this.color = color;
+    }
 }
